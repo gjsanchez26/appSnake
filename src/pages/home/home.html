@@ -1,17 +1,24 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Conections</ion-title>
+
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+      <ion-list>
+          <ion-item>
+            
+            <ion-label color="primary">IP</ion-label>
+            <ion-input placeholder="Address" id="ip" name="ip" [(ngModel)]= "ip"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label color="primary">PORT</ion-label>
+            <ion-input placeholder="Port" id="port" [(ngModel)]= "port"></ion-input>
+          </ion-item>
+          <button ion-button block outline (click)= "connect()">Connect</button>
+          
+          <h1>{{algo}}</h1>
+      </ion-list>
+
 </ion-content>
