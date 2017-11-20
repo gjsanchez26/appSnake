@@ -28,7 +28,7 @@ export class AboutPage {
 
  start():void{
     console.log("Start");
-    this.response = this.http.get();
+    this.response = this.http.get("http://192.168.0.33:40314/start");
     this.response
     .map(res => res.json())
     .subscribe(data => {
